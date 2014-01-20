@@ -8,8 +8,9 @@ var routes = require('./routes');
 var tasks = require('./routes/tasks');
 var http = require('http');
 var path = require('path');
+var mongo_config = require('./mongo.json');
 var mongoskin = require('mongoskin');
-var db = mongoskin.db('mongodb://localhost:27017/todo?auto_reconnect', {safe:true});
+var db = mongoskin.db(mongo_config.dbUrl, {safe:true});
 var app = express();
 app.use(function(req, res, next) {
   req.db = {};

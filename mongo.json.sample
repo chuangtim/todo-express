@@ -1,0 +1,5 @@
+{
+  'dbUrl': [
+    'mongodb://localhost:27017/todo?auto_reconnect'
+  ]
+}
